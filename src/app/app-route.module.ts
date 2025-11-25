@@ -5,11 +5,14 @@ import { AboutComponent } from "./about/about.component";
 
 const  routes: Routes = [
     {path: '', component: HomeComponent},
-    { path: 'about', component: AboutComponent},
+    { path: 'about', 
+        loadComponent:() => import('./about/about.component')
+                        .then(comp => comp.AboutComponent)
+    },
     { 
         path: 'courses', 
-        loadChildren: () => import('./courses/courses.module')
-                                .then( mod => mod.CoursesModule)
+        loadChildren: () => import('./courses/course.route')
+                                .then( mod => mod.courses_routes)
     }
 ]
 
