@@ -7,7 +7,7 @@ import { DetailComponent } from "./detail/detail.component";
   standalone: true,
   imports: [CommonModule, DetailComponent],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
 
